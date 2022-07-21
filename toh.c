@@ -1,26 +1,24 @@
 #include <stdio.h>
-#include<time.h>
-void delay(){
-    for(int i=0;i<1000;i++){
-    for(int j=0;j<1000;j++){
-        for(int k=0;k<1000;k++);
-    }}}
-void TH(int n, char s, char d, char a){
-    if(n>0){
-        TH(n-1,s,a,d);
-        printf("\n %c to %c",s,d);
-        delay();
-        TH(n-1,a,d,s);
+#include <conio.h>
+#include <math.h>
+void hanoi(int x, char from, char to, char aux)
+{
+    if(x==1)
+    printf("Move disk from %c to %c\n",from,to);
+    else
+    {
+        hanoi(x-1,from,aux,to);
+        printf("Move disk from %c to %c\n",from,to);
+        hanoi(x-1,aux,to,from);
     }
 }
-int main()
+void main()
 {
-    time_t st,ed;
-    st=time(NULL);
-    int n=3;
-    delay();
-    TH(n,'A','B','C');
-ed=time(NULL);
-    printf("\n TIME TAKEN = %f", difftime(ed,st));
-}
+    int disk;
+    int moves;
     
+    printf("Enter the number of disks you want to play with:");
+    scanf("%d",&disk);
+    moves=pow(2,disk)-1;
+    printf("The number of moves required is:%d\n",moves);
+}
