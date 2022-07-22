@@ -21,4 +21,5 @@ void main()
     scanf("%d",&disk);
     moves=pow(2,disk)-1;
     printf("The number of moves required is:%d\n",moves);
+    hanoi(disk,'A','C','B');
 }
