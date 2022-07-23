@@ -1,13 +1,12 @@
-
 #include<stdio.h>
 #include<conio.h>
 #include<time.h>
 #include<stdlib.h>
-int partition(int a[],int lb,int ub)
+int partition(int a[],int low,int high)
 {   
-    int start=lb;
-    int end=ub;
-    int pivot=a[lb];
+    int start=low;
+    int end=high;
+    int pivot=a[low];
     int i,j,temp;
     
     while(start<end)
@@ -30,8 +29,8 @@ int partition(int a[],int lb,int ub)
             a[end]=temp;
         }
     }
-    temp=a[lb];
-    a[lb]=a[end];
+    temp=a[low];
+    a[low]=a[end];
     a[end]=temp;
     return end;
 }   
