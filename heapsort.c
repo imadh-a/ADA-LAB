@@ -30,7 +30,7 @@ int main()
             heapSort(a, n);
             end = clock();
             printf("\nSORTED ARRAY IS: ");
-            for (i = n-1; i > 0; i--)
+            for (i = n-1; i >= 0; i--)
                 printf("%d\t", a[i]);
             printf("\n TIME TAKEN TO SORT %d NUMBERS IS %f SECS", n, (((double)(end - start)) / CLOCKS_PER_SEC));
             break;
@@ -92,3 +92,4 @@ void heapSort(int arr[], int n)
         heapify(arr, i, 0);
     }
 }
+
