@@ -43,7 +43,7 @@ void main()
                 }
                 start=clock();
                  heapSort(a, n);
-                for(j=0;j<500000;j++){
+                for(j=0;j<50000000;j++){
                     temp=38/600;
                     
                 }
