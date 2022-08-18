@@ -61,4 +61,4 @@ void dijkistra()
     {
         printf("\n%d -------> %d = %d \n ",src,j,dist[j]);
     }
-}
+} 
