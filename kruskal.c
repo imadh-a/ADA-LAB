@@ -1,5 +1,5 @@
-#include<stdio.h>;
-#include<conio.h>;
+#include<stdio.h>
+#include<conio.h>
 
 void kruskals();
 int c[10][10],n;
